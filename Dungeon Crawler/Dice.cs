@@ -12,4 +12,27 @@
 class Dice
 {
 
+    private int numberOfDice;
+    private int sidePerDice;
+    private int modifier;
+
+    public Dice(int numberOfDice, int sidePerDice, int modifier)
+    { 
+        this.numberOfDice = numberOfDice;
+        this.sidePerDice = sidePerDice;
+        this.modifier = modifier;
+    }
+
+
+    public int Throw()
+    {
+        return 0;
+    }
+
+    public override string ToString()
+    {
+
+        return $"{numberOfDice}d{sidePerDice}+{modifier}";
+    }
+
 }
