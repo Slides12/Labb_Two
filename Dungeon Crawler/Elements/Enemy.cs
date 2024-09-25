@@ -19,8 +19,8 @@ abstract class Enemy : LevelElement
 
     public string Name { get; set; }
     public int Health { get; set; }
-    //private AttackDice
-    //private DefencekDice
+    public Dice attackDice;
+    public Dice defencekDice;
 
 
     public abstract void Update();

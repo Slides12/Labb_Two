@@ -20,6 +20,10 @@ class Rat : Enemy
     {
         this.Name = "Rat";
         this.Health = 10;
+        this.attackDice = new Dice(1,6,3);
+        this.defencekDice = new Dice(1,6,1);
+        this.elementChar = 'r';
+        this.color = ConsoleColor.Red;
     }
 
     public override void Update()

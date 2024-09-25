@@ -20,4 +20,12 @@
 //Varken spelare, rats eller snakes kan gå igenom väggar eller varandra.
 
 
+Rat rat = new Rat();
+Snake snake = new Snake();
+
+
+Console.WriteLine($"Name: {rat.Name}  Stats: {rat.attackDice} DiceThrow: {rat.attackDice.Throw()}");
+Console.WriteLine($"Name: {rat.Name}  Stats: {rat.defencekDice} DiceThrow: {rat.defencekDice.Throw()}");
+Console.WriteLine($"Name: {snake.Name} Stats: {snake.defencekDice} DiceThrow: {snake.defencekDice.Throw()}");
+Console.WriteLine($"Name: {snake.Name} Stats: {snake.attackDice} DiceThrow: {snake.attackDice.Throw()}");
 

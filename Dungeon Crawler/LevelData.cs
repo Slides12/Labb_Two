@@ -22,7 +22,7 @@
 
 class LevelData
     {
-        private List<LevelElement> elements;
+        private List<LevelElement> elements = new List<LevelElement>();
 
 
     public List<LevelElement> Elements
@@ -32,13 +32,12 @@ class LevelData
         {
             return elements;
         }
-            
-            
     }
 
 
     public void Load(string fileName)
     {
-    }
 
+    
+    }
 }

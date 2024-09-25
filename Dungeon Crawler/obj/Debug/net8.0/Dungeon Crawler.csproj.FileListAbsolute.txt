@@ -12,3 +12,18 @@ C:\Users\djoha\source\repos\Labb 2\Dungeon Crawler\obj\Debug\net8.0\refint\Dunge
 C:\Users\djoha\source\repos\Labb 2\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.pdb
 C:\Users\djoha\source\repos\Labb 2\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.genruntimeconfig.cache
 C:\Users\djoha\source\repos\Labb 2\Dungeon Crawler\obj\Debug\net8.0\ref\Dungeon Crawler.dll
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\bin\Debug\net8.0\Dungeon Crawler.exe
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\bin\Debug\net8.0\Dungeon Crawler.deps.json
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\bin\Debug\net8.0\Dungeon Crawler.runtimeconfig.json
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\bin\Debug\net8.0\Dungeon Crawler.dll
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\bin\Debug\net8.0\Dungeon Crawler.pdb
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.AssemblyInfoInputs.cache
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.AssemblyInfo.cs
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.csproj.CoreCompileInputs.cache
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.sourcelink.json
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.dll
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\refint\Dungeon Crawler.dll
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.pdb
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.genruntimeconfig.cache
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\ref\Dungeon Crawler.dll

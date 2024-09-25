@@ -18,6 +18,10 @@ class Snake : Enemy
     {
         this.Name = "Snake";
         this.Health = 25;
+        this.attackDice = new Dice(3,4,2);
+        this.defencekDice = new Dice(1,8,5);
+        this.elementChar = 'S';
+        this.color = ConsoleColor.Green;
     }
 
     public override void Update()

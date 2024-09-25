@@ -18,6 +18,8 @@ class Player : Enemy
     {
         this.Name = "Player";
         this.Health = 100;
+        this.attackDice = new Dice(2, 6, 2);
+        this.defencekDice = new Dice(2, 6, 0);
     }
 
     public override void Update()
