@@ -27,3 +27,4 @@ C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\refint\Dun
 C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.pdb
 C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\Dungeon Crawler.genruntimeconfig.cache
 C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\obj\Debug\net8.0\ref\Dungeon Crawler.dll
+C:\Users\djoha\source\repos\Labb_Two\Dungeon Crawler\bin\Debug\net8.0\Levels\Level1.txt

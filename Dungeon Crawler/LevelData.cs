@@ -2,9 +2,9 @@
 //Denna ska även exponeras i form av en public readonly property “Elements”. x
 
 //Vidare har LevelData en metod, Load(string filename), x
-//som läser in data från filen man anger vid anrop.
-//Load läser igenom textfilen tecken för tecken, och för varje tecken den hittar som är någon av #,
-//r, eller s, så skapar den en ny instans av den klass som motsvarar tecknet och lägger till en referens till instansen på “elements”-listan.
+//som läser in data från filen man anger vid anrop. x
+//Load läser igenom textfilen tecken för tecken, och för varje tecken den hittar som är någon av #,x
+//r, eller s, så skapar den en ny instans av den klass som motsvarar tecknet och lägger till en referens till instansen på “elements”-listan.x
 //Tänk på att när instansen skapas så måste den även få en (X/Y) position;
 //d.v.s Load behöver alltså hålla reda på vilken rad och kolumn i filen som tecknet hittades på. Den behöver även spara undan startpositionen
 //för spelaren när den stöter på @.
@@ -37,7 +37,66 @@ class LevelData
 
     public void Load(string fileName)
     {
+        int i = 0;
+        int j = 0;
+        using (StreamReader reader = new StreamReader(fileName))
+        {
+            while (!reader.EndOfStream)
+            {
+                foreach (char c in reader.ReadLine())
+                {
+                    //Console.Write(c);
+                    if (c == '#')
+                    {
+                        Wall wall = new Wall();
+                        wall.xPos = j;
+                        wall.yPos = i;
+                        elements.Add(wall);
+                        j++;
+                    }
+                    else if (c == 's')
+                    {
+                        Snake snake = new Snake();
+                        snake.xPos = j;
+                        snake.yPos = i;
+                        elements.Add(snake);
+                        j++;
 
-    
+                    }
+                    else if (c == 'r')
+                    {
+                        Rat rat = new Rat();
+                        rat.xPos = j;
+                        rat.yPos = i;
+                        elements.Add(rat);
+                        j++;
+
+                    }
+                    else if (c == '@')
+                    {
+                        Player player = new Player();
+                        player.xPos = j;
+                        player.yPos = i;
+                        elements.Add(player);
+                        j++;
+
+                    }
+                    else if(c == '\n')
+                    {
+                        i++;
+                        j = 0;
+                    }
+                    else
+                    {
+                        j++;
+                    }
+
+
+                }
+
+            }
+
+        }
+
     }
 }

@@ -11,18 +11,25 @@
 //Snake: HP = 25, Attack = 3d4 + 2, Defence = 1d8 + 5
 
 
-class Player : Enemy
+class Player : LevelElement
 {
+    public string Name { get; set; }
+    public int Health { get; set; }
 
+    public Dice attackDice;
+    public Dice defencekDice;
     public Player()
     {
         this.Name = "Player";
         this.Health = 100;
         this.attackDice = new Dice(2, 6, 2);
         this.defencekDice = new Dice(2, 6, 0);
+        this.Position = new Position(0, 0);
+
     }
 
-    public override void Update()
+   
+    public void Update()
     {
         //Spelaren förflyttar sig 1 steg upp, ner, höger eller vänster varje omgång,
         //alternativt står still, beroende på vilken knapp användaren tryckt på.

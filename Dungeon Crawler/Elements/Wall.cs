@@ -9,5 +9,9 @@ class Wall : LevelElement
     {
         this.elementChar = '#';
         this.color = ConsoleColor.Gray;
+       
     }
+
+
+    
 }

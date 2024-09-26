@@ -20,9 +20,13 @@ class Snake : Enemy
         this.Health = 25;
         this.attackDice = new Dice(3,4,2);
         this.defencekDice = new Dice(1,8,5);
-        this.elementChar = 'S';
+        this.elementChar = 's';
         this.color = ConsoleColor.Green;
+        this.Position = new Position(0, 0);
+
+
     }
+    
 
     public override void Update()
     {
