@@ -47,69 +47,57 @@ class LevelData
             while (!reader.EndOfStream)
             {
 
-                Console.Write(reader.ReadLine());
+                //Console.Write(reader.ReadLine());
 
-                //foreach (char c in reader.ReadLine())
-                //{
-                //if (c == '#')
-                //{
-                //    Wall wall = new Wall();
-                //    wall.xPos = x;
-                //    wall.yPos = y;
-                //    elements.Add(wall);
-                //    x++;
-                //}
-                //else if (c == 's')
-                //{
-                //    Snake snake = new Snake();
-                //    snake.xPos = x;
-                //    snake.yPos = y;
-                //    elements.Add(snake);
-                //    x++;
+                foreach (char c in reader.ReadLine())
+                {
+                    if (c == '#')
+                    {
+                        Wall wall = new Wall() {xPos = x, yPos = y };
+                        elements.Add(wall);
+                        x++;
+                    }
+                    else if (c == 's')
+                    {
+                        Snake snake = new Snake() { xPos = x, yPos = y };
+                        elements.Add(snake);
+                        x++;
 
-                //}
-                //else if (c == 'r')
-                //{
-                //    Rat rat = new Rat();
-                //    rat.xPos = x;
-                //    rat.yPos = y;
-                //    elements.Add(rat);
-                //    x++;
+                    }
+                    else if (c == 'r')
+                    {
+                        Rat rat = new Rat() { xPos = x, yPos = y };
+                        elements.Add(rat);
+                        x++;
 
-                //}
-                //else if (c == '@')
-                //{
-                //    Player player = new Player();
-                //    player.xPos = x;
-                //    player.yPos = y;
-                //    elements.Add(player);
-                //    x++;
+                    }
+                    else if (c == '@')
+                    {
+                        Player player = new Player() { xPos = x, yPos = y };
+                        elements.Add(player);
+                        x++;
 
-                //}
-                //else if(c == ' ')
-                //{
-                //    x++;
-                //}
-                //else
-                //{
-                //    x++;
-                //}
+                    }
+                    else
+                    {
+                        x++;
+                    }
 
 
-                //}
-                //y++;
-                //x = 0;
+                }
+                y++;
+                x = 0;
 
             }
 
         }
-        
-        
-        //foreach (var element in elements)
-        //{
 
-        //    element.Draw();
-        //}
+
+        foreach (var element in elements)
+        {
+
+            element.Draw();
+        }
 
     }
 }
