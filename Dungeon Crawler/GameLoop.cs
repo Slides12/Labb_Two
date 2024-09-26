@@ -27,5 +27,54 @@
 
 class GameLoop
 {
+    LevelData lD = new LevelData();
+    Player player = new Player() {Name = "Daniel" };
+    public ConsoleKeyInfo cki;
+
+
+    public void StartGame() {
+        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.WriteLine($"Name: {player.Name}  -  Health: {player.Health}/100  -  Turn: {player.moveCount}");
+        Console.ResetColor();
+
+        lD.Load(@"Levels\Level1.txt");
+        
+        foreach(var element in lD.Elements)
+        {
+            if(element is Player)
+            {
+                this.player.yPos = element.yPos;
+                this.player.xPos = element.xPos;
+
+            }
+        }
+        player.Draw();
+
+        Loop();
+    }
+
+    private void Loop()
+    {
+        while (true)
+        {
+            UpdateHealthAndMoveCount();
+
+            cki = Console.ReadKey();
+            player.UpdateMovement(cki);
+
+        }
+
+    }
+
+
+    private void UpdateHealthAndMoveCount()
+    {
+        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.SetCursorPosition(0, 0);
+
+        Console.WriteLine($"Name: {player.Name}  -  Health: {player.Health}/100  -  Turn: {player.moveCount}");
+        Console.ResetColor();
+    }
+
 
 }

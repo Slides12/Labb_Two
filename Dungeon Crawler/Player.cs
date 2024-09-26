@@ -18,6 +18,12 @@ class Player : LevelElement
 
     public Dice attackDice;
     public Dice defencekDice;
+
+    public ConsoleKeyInfo cki;
+    public int moveCount;
+
+
+
     public Player()
     {
         this.Name = "Player";
@@ -31,9 +37,28 @@ class Player : LevelElement
     }
 
 
-    public void Update()
+    public void UpdateMovement(ConsoleKeyInfo cki)
     {
         //Spelaren förflyttar sig 1 steg upp, ner, höger eller vänster varje omgång,
         //alternativt står still, beroende på vilken knapp användaren tryckt på.
+
+        if(cki.Key == ConsoleKey.LeftArrow || cki.Key == ConsoleKey.A)
+        {
+            this.xPos -= 1;
+        }
+        else if (cki.Key == ConsoleKey.RightArrow || cki.Key == ConsoleKey.D)
+        {
+            this.xPos += 1;
+        }
+        else if (cki.Key == ConsoleKey.DownArrow || cki.Key == ConsoleKey.S)
+        {
+            this.yPos += 1;
+        }
+        else if (cki.Key == ConsoleKey.UpArrow || cki.Key == ConsoleKey.W)
+        {
+            this.yPos -= 1;
+        }
+        this.moveCount++;
+        base.Draw();
     }
 }

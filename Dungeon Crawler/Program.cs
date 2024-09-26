@@ -28,11 +28,10 @@
 //Console.WriteLine($"Name: {snake.Name} Stats: {snake.defencekDice} DiceThrow: {snake.defencekDice.Throw()}");
 //Console.WriteLine($"Name: {snake.Name} Stats: {snake.attackDice} DiceThrow: {snake.attackDice.Throw()}");
 
-LevelData lD = new LevelData();
 
-lD.Load(@"Levels\Level1.txt");
-
+GameLoop gameLoop = new GameLoop();
 
 
-
+gameLoop.StartGame();
 Console.WriteLine();
+

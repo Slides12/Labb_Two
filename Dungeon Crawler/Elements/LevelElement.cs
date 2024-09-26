@@ -12,6 +12,8 @@ abstract class LevelElement
 {
     public int yPos { get; set; }
     public int xPos { get; set; }
+    private int lastXPos;
+    private int lastYPos;
 
     public char elementChar;
     public ConsoleColor color;
@@ -22,10 +24,22 @@ abstract class LevelElement
 
     public void Draw()
     {
+        ResetLastPos();
+
         Console.SetCursorPosition(xPos, yPos);
         Console.ForegroundColor = this.color;
         Console.Write(this.elementChar);
         Console.ResetColor();
+        lastXPos = xPos;
+        lastYPos = yPos;
+        Console.CursorVisible = false;
+    }
+
+
+    private void ResetLastPos()
+    {
+        Console.SetCursorPosition(lastXPos, lastYPos);
+        Console.Write(" ");
     }
 
 }

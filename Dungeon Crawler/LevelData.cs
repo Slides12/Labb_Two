@@ -38,7 +38,7 @@ class LevelData
 
     public void Load(string fileName)
     {
-        int y = 0;
+        int y = 3;
         int x = 0;
         using (StreamReader reader = new StreamReader(fileName))
         {
@@ -95,8 +95,9 @@ class LevelData
 
         foreach (var element in elements)
         {
-
+            if(element.elementChar != '@') { 
             element.Draw();
+            }
         }
 
     }
