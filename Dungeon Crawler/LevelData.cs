@@ -5,9 +5,10 @@
 //som läser in data från filen man anger vid anrop. x
 //Load läser igenom textfilen tecken för tecken, och för varje tecken den hittar som är någon av #,x
 //r, eller s, så skapar den en ny instans av den klass som motsvarar tecknet och lägger till en referens till instansen på “elements”-listan.x
-//Tänk på att när instansen skapas så måste den även få en (X/Y) position;
+
+//Tänk på att när instansen skapas så måste den även få en (X/Y) position; x
 //d.v.s Load behöver alltså hålla reda på vilken rad och kolumn i filen som tecknet hittades på. Den behöver även spara undan startpositionen
-//för spelaren när den stöter på @.
+//för spelaren när den stöter på @. x
 
 //När filen är inläst bör det alltså finnas ett objekt i “elements” för varje tecken i filen (exkluderat space/radbyte),
 //och en enkel foreach-loop som anropar .Draw() för varje element i listan bör nu rita upp hela banan på skärmen.
@@ -37,66 +38,78 @@ class LevelData
 
     public void Load(string fileName)
     {
-        int i = 0;
-        int j = 0;
+        int y = 0;
+        int x = 0;
         using (StreamReader reader = new StreamReader(fileName))
         {
+
+
             while (!reader.EndOfStream)
             {
-                foreach (char c in reader.ReadLine())
-                {
-                    //Console.Write(c);
-                    if (c == '#')
-                    {
-                        Wall wall = new Wall();
-                        wall.xPos = j;
-                        wall.yPos = i;
-                        elements.Add(wall);
-                        j++;
-                    }
-                    else if (c == 's')
-                    {
-                        Snake snake = new Snake();
-                        snake.xPos = j;
-                        snake.yPos = i;
-                        elements.Add(snake);
-                        j++;
 
-                    }
-                    else if (c == 'r')
-                    {
-                        Rat rat = new Rat();
-                        rat.xPos = j;
-                        rat.yPos = i;
-                        elements.Add(rat);
-                        j++;
+                Console.Write(reader.ReadLine());
 
-                    }
-                    else if (c == '@')
-                    {
-                        Player player = new Player();
-                        player.xPos = j;
-                        player.yPos = i;
-                        elements.Add(player);
-                        j++;
+                //foreach (char c in reader.ReadLine())
+                //{
+                //if (c == '#')
+                //{
+                //    Wall wall = new Wall();
+                //    wall.xPos = x;
+                //    wall.yPos = y;
+                //    elements.Add(wall);
+                //    x++;
+                //}
+                //else if (c == 's')
+                //{
+                //    Snake snake = new Snake();
+                //    snake.xPos = x;
+                //    snake.yPos = y;
+                //    elements.Add(snake);
+                //    x++;
 
-                    }
-                    else if(c == '\n')
-                    {
-                        i++;
-                        j = 0;
-                    }
-                    else
-                    {
-                        j++;
-                    }
+                //}
+                //else if (c == 'r')
+                //{
+                //    Rat rat = new Rat();
+                //    rat.xPos = x;
+                //    rat.yPos = y;
+                //    elements.Add(rat);
+                //    x++;
+
+                //}
+                //else if (c == '@')
+                //{
+                //    Player player = new Player();
+                //    player.xPos = x;
+                //    player.yPos = y;
+                //    elements.Add(player);
+                //    x++;
+
+                //}
+                //else if(c == ' ')
+                //{
+                //    x++;
+                //}
+                //else
+                //{
+                //    x++;
+                //}
 
 
-                }
+                //}
+                //y++;
+                //x = 0;
 
             }
 
         }
+        
+        
+        //foreach (var element in elements)
+        //{
+
+        //    element.Draw();
+        //}
 
     }
 }

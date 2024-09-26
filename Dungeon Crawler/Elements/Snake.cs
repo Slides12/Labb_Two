@@ -22,7 +22,7 @@ class Snake : Enemy
         this.defencekDice = new Dice(1,8,5);
         this.elementChar = 's';
         this.color = ConsoleColor.Green;
-        this.Position = new Position(0, 0);
+        this.Position = new Position(this.xPos, this.yPos);
 
 
     }

@@ -22,7 +22,9 @@ abstract class LevelElement
 
     public void Draw()
     {
-
+        Console.ForegroundColor = this.color;
+        Console.Write(this.elementChar);
+        Console.ResetColor();
     }
 
 }

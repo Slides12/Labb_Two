@@ -33,9 +33,6 @@ LevelData lD = new LevelData();
 lD.Load(@"Levels\Level1.txt");
 
 
-foreach(var c in lD.Elements)
-{
-    Console.Write(c);
-}
+
 
 Console.WriteLine();

@@ -9,9 +9,11 @@ class Wall : LevelElement
     {
         this.elementChar = '#';
         this.color = ConsoleColor.Gray;
-       
+        this.Position = new Position(this.xPos, this.yPos);
+
+
     }
 
 
-    
+
 }

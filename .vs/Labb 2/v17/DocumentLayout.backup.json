@@ -3,48 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\elements\\levelelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\elements\\levelelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\elements\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\elements\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\elements\\rat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\elements\\rat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\elements\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\elements\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\elements\\wall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\elements\\wall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\elements\\snake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\elements\\snake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\elements\\wall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\elements\\wall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|c:\\users\\djoha\\source\\repos\\labb_two\\dungeon crawler\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B75272A-270C-48EE-84CD-2EAEB1E1B549}|Dungeon Crawler\\Dungeon Crawler.csproj|solutionrelative:dungeon crawler\\gameloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,80 +62,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Position.cs",
-              "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Position.cs",
-              "RelativeDocumentMoniker": "Dungeon Crawler\\Position.cs",
-              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Position.cs",
-              "RelativeToolTip": "Dungeon Crawler\\Position.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T14:02:22.88Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Player.cs",
-              "RelativeDocumentMoniker": "Dungeon Crawler\\Player.cs",
-              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Player.cs",
-              "RelativeToolTip": "Dungeon Crawler\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAhwAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T14:02:01.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dice.cs",
-              "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Dice.cs",
-              "RelativeDocumentMoniker": "Dungeon Crawler\\Dice.cs",
-              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Dice.cs",
-              "RelativeToolTip": "Dungeon Crawler\\Dice.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAqwCcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T14:00:48.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GameLoop.cs",
-              "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\GameLoop.cs",
-              "RelativeDocumentMoniker": "Dungeon Crawler\\GameLoop.cs",
-              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\GameLoop.cs",
-              "RelativeToolTip": "Dungeon Crawler\\GameLoop.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T13:58:21.695Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "LevelData.cs",
               "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\LevelData.cs",
               "RelativeDocumentMoniker": "Dungeon Crawler\\LevelData.cs",
-              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\LevelData.cs",
-              "RelativeToolTip": "Dungeon Crawler\\LevelData.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACgAAAAEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\LevelData.cs*",
+              "RelativeToolTip": "Dungeon Crawler\\LevelData.cs*",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAmwDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T13:53:06.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Snake.cs",
-              "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Elements\\Snake.cs",
-              "RelativeDocumentMoniker": "Dungeon Crawler\\Elements\\Snake.cs",
-              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Elements\\Snake.cs",
-              "RelativeToolTip": "Dungeon Crawler\\Elements\\Snake.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T13:50:51.781Z",
               "EditorCaption": ""
             },
             {
@@ -146,35 +81,36 @@
               "RelativeDocumentMoniker": "Dungeon Crawler\\Elements\\Rat.cs",
               "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Elements\\Rat.cs",
               "RelativeToolTip": "Dungeon Crawler\\Elements\\Rat.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAhwBkAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T13:50:43.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Elements\\Enemy.cs",
               "RelativeDocumentMoniker": "Dungeon Crawler\\Elements\\Enemy.cs",
               "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Elements\\Enemy.cs",
               "RelativeToolTip": "Dungeon Crawler\\Elements\\Enemy.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T13:43:56.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "Wall.cs",
               "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Elements\\Wall.cs",
               "RelativeDocumentMoniker": "Dungeon Crawler\\Elements\\Wall.cs",
               "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Elements\\Wall.cs",
               "RelativeToolTip": "Dungeon Crawler\\Elements\\Wall.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T13:43:22.581Z"
+              "WhenOpened": "2024-09-25T13:43:22.581Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -184,22 +120,85 @@
               "RelativeDocumentMoniker": "Dungeon Crawler\\Elements\\LevelElement.cs",
               "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Elements\\LevelElement.cs",
               "RelativeToolTip": "Dungeon Crawler\\Elements\\LevelElement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T13:39:42.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Program.cs",
               "RelativeDocumentMoniker": "Dungeon Crawler\\Program.cs",
-              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Program.cs*",
-              "RelativeToolTip": "Dungeon Crawler\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwB0AAABLAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Program.cs",
+              "RelativeToolTip": "Dungeon Crawler\\Program.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T13:36:23.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Snake.cs",
+              "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Elements\\Snake.cs",
+              "RelativeDocumentMoniker": "Dungeon Crawler\\Elements\\Snake.cs",
+              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Elements\\Snake.cs",
+              "RelativeToolTip": "Dungeon Crawler\\Elements\\Snake.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T13:50:51.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GameLoop.cs",
+              "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\GameLoop.cs",
+              "RelativeDocumentMoniker": "Dungeon Crawler\\GameLoop.cs",
+              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\GameLoop.cs",
+              "RelativeToolTip": "Dungeon Crawler\\GameLoop.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T13:58:21.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Dice.cs",
+              "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Dice.cs",
+              "RelativeDocumentMoniker": "Dungeon Crawler\\Dice.cs",
+              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Dice.cs",
+              "RelativeToolTip": "Dungeon Crawler\\Dice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T14:00:48.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Player.cs",
+              "RelativeDocumentMoniker": "Dungeon Crawler\\Player.cs",
+              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Player.cs",
+              "RelativeToolTip": "Dungeon Crawler\\Player.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T14:02:01.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Position.cs",
+              "DocumentMoniker": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Position.cs",
+              "RelativeDocumentMoniker": "Dungeon Crawler\\Position.cs",
+              "ToolTip": "C:\\Users\\djoha\\source\\repos\\Labb_Two\\Dungeon Crawler\\Position.cs",
+              "RelativeToolTip": "Dungeon Crawler\\Position.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T14:02:22.88Z",
               "EditorCaption": ""
             }
           ]

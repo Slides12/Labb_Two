@@ -24,11 +24,13 @@ class Player : LevelElement
         this.Health = 100;
         this.attackDice = new Dice(2, 6, 2);
         this.defencekDice = new Dice(2, 6, 0);
-        this.Position = new Position(0, 0);
+        this.Position = new Position(this.xPos, this.yPos);
+        this.elementChar = '@';
+        this.color = ConsoleColor.Blue;
 
     }
 
-   
+
     public void Update()
     {
         //Spelaren förflyttar sig 1 steg upp, ner, höger eller vänster varje omgång,

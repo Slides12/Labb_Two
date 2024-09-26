@@ -24,9 +24,11 @@ class Rat : Enemy
         this.defencekDice = new Dice(1,6,1);
         this.elementChar = 'r';
         this.color = ConsoleColor.Red;
+        this.Position = new Position(this.xPos, this.yPos);
+
     }
 
-   
+
 
     public override void Update()
     {
