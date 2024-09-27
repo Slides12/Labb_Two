@@ -66,7 +66,6 @@ class Player : LevelElement
             this.xPos = nextX;
             this.yPos = nextY;
         }
-
         this.moveCount++;
         base.Draw();
     }

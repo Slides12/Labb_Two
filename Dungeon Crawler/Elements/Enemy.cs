@@ -14,16 +14,18 @@
 //vi vill alltså kunna anropa update-metoden på alla fiender
 //och sedan sköter de olika subklasserna hur de uppdateras (till exempel olika förflyttningsmönster).
 
+using System.Xml.Linq;
+
 abstract class Enemy : LevelElement
 {
 
     public string Name { get; set; }
     public int Health { get; set; }
-    public Dice attackDice;
-    public Dice defencekDice;
+    public Dice AttackDice { get; set; }
+    public Dice DefencekDice { get; set; }
 
 
-    public abstract void Update();
+    public abstract void Update(List<LevelElement> elements);
 
 
 }

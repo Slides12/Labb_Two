@@ -18,8 +18,8 @@ class Snake : Enemy
     {
         this.Name = "Snake";
         this.Health = 25;
-        this.attackDice = new Dice(3,4,2);
-        this.defencekDice = new Dice(1,8,5);
+        this.AttackDice = new Dice(3,4,2);
+        this.DefencekDice = new Dice(1,8,5);
         this.elementChar = 's';
         this.color = ConsoleColor.Green;
         this.Position = new Position(this.xPos, this.yPos);
@@ -28,7 +28,7 @@ class Snake : Enemy
     }
     
 
-    public override void Update()
+    public override void Update(List<LevelElement> elements)
     {
         this.Position = new Position(this.xPos, this.yPos);
 

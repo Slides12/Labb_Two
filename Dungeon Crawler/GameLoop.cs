@@ -25,6 +25,8 @@
 
 
 
+using System.Xml.Linq;
+
 class GameLoop
 {
     LevelData levelData = new LevelData();
@@ -61,6 +63,8 @@ class GameLoop
 
             cki = Console.ReadKey();
             player.UpdateMovement(cki,levelData.Elements);
+            UpdateEnemyMovements(levelData.Elements);
+
 
         }
 
@@ -77,4 +81,14 @@ class GameLoop
     }
 
 
+
+    public static void UpdateEnemyMovements(List<LevelElement> elements)
+    {
+        foreach (var element in elements)
+        {
+            (element as Rat)?.Update(elements);
+            (element as Snake)?.Update(elements);
+
+        }
+    }
 }

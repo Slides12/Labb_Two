@@ -12,6 +12,8 @@
 
 
 using System.Runtime.ConstrainedExecution;
+using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 class Rat : Enemy
 {
@@ -20,8 +22,8 @@ class Rat : Enemy
     {
         this.Name = "Rat";
         this.Health = 10;
-        this.attackDice = new Dice(1,6,3);
-        this.defencekDice = new Dice(1,6,1);
+        this.AttackDice = new Dice(1,6,3);
+        this.DefencekDice = new Dice(1,6,1);
         this.elementChar = 'r';
         this.color = ConsoleColor.Red;
         this.Position = new Position(this.xPos, this.yPos);
@@ -30,10 +32,53 @@ class Rat : Enemy
 
 
 
-    public override void Update()
+    public override void Update(List<LevelElement> elements)
     {
         this.Position = new Position(this.xPos, this.yPos);
+        Random rand = new Random();
+        int direction = rand.Next(0,4);
+        int nextX = this.xPos;
+        int nextY = this.yPos;
+        if (direction == 0)
+        {
+            nextX -= 1;
+        }
+        else if (direction == 1)
+        {
+            nextX += 1;
+        }
+        else if (direction == 2)
+        {
+            nextY += 1;
+        }
+        else if (direction == 3)
+        {
+            nextY -= 1;
+        }
+        if (!IsAWall(nextX, nextY, elements))
+        {
+            this.xPos = nextX;
+            this.yPos = nextY;
+        }
+
+        base.Draw();
 
         //Rat förflyttar sig 1 steg i slumpmässig vald riktning(upp, ner, höger eller vänster) varje omgång.
+    }
+
+    public bool IsAWall(int nextX, int nextY, List<LevelElement> elements)
+    {
+        for (int i = 0; i < elements.Count; i++)
+        {
+            if (elements[i].elementChar == '#')
+            {
+                if (elements[i].xPos == nextX && elements[i].yPos == nextY)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+
     }
 }
