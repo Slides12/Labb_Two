@@ -11,6 +11,8 @@
 //Snake: HP = 25, Attack = 3d4 + 2, Defence = 1d8 + 5
 
 
+using System.Xml.Linq;
+
 class Player : LevelElement
 {
     public string Name { get; set; }
@@ -30,35 +32,65 @@ class Player : LevelElement
         this.Health = 100;
         this.attackDice = new Dice(2, 6, 2);
         this.defencekDice = new Dice(2, 6, 0);
-        this.Position = new Position(this.xPos, this.yPos);
         this.elementChar = '@';
         this.color = ConsoleColor.Blue;
 
     }
 
 
-    public void UpdateMovement(ConsoleKeyInfo cki)
+    public void UpdateMovement(ConsoleKeyInfo cki, List<LevelElement> elements)
     {
-        //Spelaren förflyttar sig 1 steg upp, ner, höger eller vänster varje omgång,
-        //alternativt står still, beroende på vilken knapp användaren tryckt på.
 
-        if(cki.Key == ConsoleKey.LeftArrow || cki.Key == ConsoleKey.A)
+        int nextX = this.xPos;
+        int nextY = this.yPos;
+
+        if (cki.Key == ConsoleKey.LeftArrow || cki.Key == ConsoleKey.A)
         {
-            this.xPos -= 1;
+            nextX -= 1; 
         }
         else if (cki.Key == ConsoleKey.RightArrow || cki.Key == ConsoleKey.D)
         {
-            this.xPos += 1;
+            nextX += 1; 
         }
         else if (cki.Key == ConsoleKey.DownArrow || cki.Key == ConsoleKey.S)
         {
-            this.yPos += 1;
+            nextY += 1; 
         }
         else if (cki.Key == ConsoleKey.UpArrow || cki.Key == ConsoleKey.W)
         {
-            this.yPos -= 1;
+            nextY -= 1; 
         }
+
+        if (!IsAWall(nextX, nextY, elements))
+        {
+            this.xPos = nextX;
+            this.yPos = nextY;
+        }
+
         this.moveCount++;
         base.Draw();
     }
+
+
+
+
+    public bool IsAWall(int nextX, int nextY, List<LevelElement> elements)
+    {
+        for (int i = 0; i < elements.Count; i++)
+        {
+            if (elements[i].elementChar == '#')
+            {
+                if (elements[i].xPos == nextX && elements[i].yPos == nextY)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+
+    }
+
+
+
+
 }

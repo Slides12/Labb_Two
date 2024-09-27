@@ -27,7 +27,7 @@
 
 class GameLoop
 {
-    LevelData lD = new LevelData();
+    LevelData levelData = new LevelData();
     Player player = new Player() {Name = "Daniel" };
     public ConsoleKeyInfo cki;
 
@@ -37,9 +37,9 @@ class GameLoop
         Console.WriteLine($"Name: {player.Name}  -  Health: {player.Health}/100  -  Turn: {player.moveCount}");
         Console.ResetColor();
 
-        lD.Load(@"Levels\Level1.txt");
+        levelData.Load(@"Levels\Level1.txt");
         
-        foreach(var element in lD.Elements)
+        foreach(var element in levelData.Elements)
         {
             if(element is Player)
             {
@@ -60,7 +60,7 @@ class GameLoop
             UpdateHealthAndMoveCount();
 
             cki = Console.ReadKey();
-            player.UpdateMovement(cki);
+            player.UpdateMovement(cki,levelData.Elements);
 
         }
 

@@ -32,6 +32,8 @@ class Rat : Enemy
 
     public override void Update()
     {
+        this.Position = new Position(this.xPos, this.yPos);
+
         //Rat förflyttar sig 1 steg i slumpmässig vald riktning(upp, ner, höger eller vänster) varje omgång.
     }
 }

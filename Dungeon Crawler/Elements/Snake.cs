@@ -30,6 +30,8 @@ class Snake : Enemy
 
     public override void Update()
     {
+        this.Position = new Position(this.xPos, this.yPos);
+
         //Snake står still om spelaren är mer än 2 rutor bort, annars förflyttar den sig bort från spelaren.
     }
 }

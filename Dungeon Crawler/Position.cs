@@ -34,7 +34,7 @@ public struct Position
         double absX = VerticalDistanceTo(position);
         double absY = HorizontalDistanceTo(position);
 
-        double distanceBetween = Math.Sqrt((absX * absX) + (absY + absY));
+        double distanceBetween = Math.Sqrt(((absX * absX) + (absY + absY)));
 
 
         return distanceBetween;

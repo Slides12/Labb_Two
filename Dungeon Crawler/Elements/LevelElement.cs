@@ -12,8 +12,8 @@ abstract class LevelElement
 {
     public int yPos { get; set; }
     public int xPos { get; set; }
-    private int lastXPos;
-    private int lastYPos;
+    public int lastXPos;
+    public int lastYPos;
 
     public char elementChar;
     public ConsoleColor color;
