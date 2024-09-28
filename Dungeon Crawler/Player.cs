@@ -12,6 +12,7 @@
 
 
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 class Player : LevelElement
 {
@@ -64,40 +65,9 @@ class Player : LevelElement
 
         if (IsAEnemy(nextX, nextY, elements))
         {
-            int playerATK = attackDice.Throw();
-            int playerDEF = defencekDice.Throw();
-
-            int enemyATK = GetEnemy(nextX, nextY, elements).AttackDice.Throw();
-            int enemyDEF = GetEnemy(nextX, nextY, elements).DefencekDice.Throw();
-
-            Console.SetCursorPosition(0, 1);
-            Console.WriteLine($"You (ATK: {attackDice} => {playerATK}) attacked the (DEF: {GetEnemy(nextX, nextY, elements).DefencekDice} => {enemyDEF})");
-            Console.SetCursorPosition(0, 2);
-            Console.WriteLine($"You (ATK: {GetEnemy(nextX,nextY, elements).AttackDice} => {enemyATK}) attacked the (DEF: {defencekDice} => {playerDEF})");
-
-
-            if (playerATK > enemyDEF) {
-                GetEnemy(nextX, nextY, elements).TakeDamage(playerATK - enemyDEF);
-                Console.SetCursorPosition(55, 1);
-                Console.Write("You made a impact. ");
-            }
-            else if(playerATK <= enemyDEF)
-            {
-                Console.SetCursorPosition(55, 1);
-                Console.Write(" Did no damage.");
-            }
-            
-
-            if(enemyATK > playerDEF)
-            {
-                TakeDamage(enemyATK-playerDEF);
-            }
+            DisplayCombatLog(nextX, nextY, elements);
         }
-         
-            Console.SetCursorPosition(0, 1);
-            Console.WriteLine($"");
-            Console.SetCursorPosition(0, 2);
-            Console.WriteLine($"");
+
         
 
         if (!IsAWall(nextX, nextY, elements))
@@ -117,12 +87,13 @@ class Player : LevelElement
     {
         for (int i = 0; i < elements.Count; i++)
         {
-            
+            if (elements[i].elementChar != '@')
+            {
                 if (elements[i].xPos == nextX && elements[i].yPos == nextY)
                 {
                     return true;
                 }
-            
+            }
         }
         return false;
 
@@ -177,4 +148,38 @@ class Player : LevelElement
 
     }
 
-}
+
+
+    public void DisplayCombatLog(int nextX, int nextY, List<LevelElement> elements)
+    {
+        int playerATK = attackDice.Throw();
+        int playerDEF = defencekDice.Throw();
+
+        int enemyATK = GetEnemy(nextX, nextY, elements).AttackDice.Throw();
+        int enemyDEF = GetEnemy(nextX, nextY, elements).DefencekDice.Throw();
+
+        Console.SetCursorPosition(0, 1);
+        Console.WriteLine($"You (ATK: {attackDice} => {playerATK}) attacked the {GetEnemy(nextX, nextY, elements).Name} (DEF: {GetEnemy(nextX, nextY, elements).DefencekDice} => {enemyDEF})");
+        Console.SetCursorPosition(0, 2);
+        Console.WriteLine($"The {GetEnemy(nextX, nextY, elements).Name} (ATK: {GetEnemy(nextX, nextY, elements).AttackDice} => {enemyATK}) attacked the (DEF: {defencekDice} => {playerDEF})");
+
+
+        if (playerATK > enemyDEF)
+        {
+            GetEnemy(nextX, nextY, elements).TakeDamage(playerATK - enemyDEF,elements);
+            Console.SetCursorPosition(55, 1);
+            //Console.Write("You made a impact. ");
+        }
+        else if (playerATK <= enemyDEF)
+        {
+            Console.SetCursorPosition(55, 1);
+            //Console.Write(" Did no damage.");
+        }
+
+
+        if (enemyATK > playerDEF)
+        {
+            TakeDamage(enemyATK - playerDEF);
+        }
+    }         
+    }

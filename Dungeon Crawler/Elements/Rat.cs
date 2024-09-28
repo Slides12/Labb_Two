@@ -35,7 +35,6 @@ class Rat : Enemy
 
     public override void Update(List<LevelElement> elements, Player player)
     {
-
         this.Position = new Position(this.xPos, this.yPos);
         Random rand = new Random();
         int direction = rand.Next(0,4);
@@ -64,7 +63,6 @@ class Rat : Enemy
         }
 
         base.Draw();
-
         //Rat förflyttar sig 1 steg i slumpmässig vald riktning(upp, ner, höger eller vänster) varje omgång.
     }
 
@@ -85,17 +83,19 @@ class Rat : Enemy
 
     }
 
-    public override void TakeDamage(int damageTaken)
+    public override void TakeDamage(int damageTaken, List<LevelElement> elements)
     {
         this.Health -= damageTaken;
         if(this.Health <= 0)
         {
-            Die();
+            Die(elements);
         }
     }
 
-    public override void Die()
+    public override void Die(List<LevelElement> elements)
     {
         this.IsDead = true;
+        elements.Remove(this);
+
     }
 }

@@ -29,8 +29,8 @@ abstract class Enemy : LevelElement
 
 public abstract void Update(List<LevelElement> elements, Player player);
 
-    public abstract void TakeDamage(int damageTaken);
-    public abstract void Die();
+    public abstract void TakeDamage(int damageTaken, List<LevelElement> elements);
+    public abstract void Die(List<LevelElement> elements);
 
 
 

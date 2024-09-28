@@ -91,18 +91,19 @@ class Snake : Enemy
 
     }
 
-    public override void TakeDamage(int damageTaken)
+    public override void TakeDamage(int damageTaken, List<LevelElement> elements)
     {
         this.Health -= damageTaken;
         if (this.Health <= 0)
         {
-            Die();
+            Die(elements);
         }
     }
 
-    public override void Die()
+    public override void Die(List<LevelElement> elements)
     {
         this.IsDead = true;
+        elements.Remove(this);
 
     }
 }
