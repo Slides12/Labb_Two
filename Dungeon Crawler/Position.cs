@@ -18,12 +18,12 @@ public struct Position
     }
 
 
-    public int VerticalDistanceTo(Position position)
+    public int HorizontalDistanceTo(Position position)
     {
         return Math.Abs(position.x - this.x);
     }
 
-    public int HorizontalDistanceTo(Position position)
+    public int VerticalDistanceTo(Position position)
     {
         return Math.Abs(position.y - this.y);
     }
@@ -38,6 +38,19 @@ public struct Position
 
 
         return distanceBetween;
+    }
+
+    public double AngleTo(Position position)
+    {
+
+        double absX = position.x - this.x;
+        double absY = position.y - this.y;
+
+        double angleRadians = Math.Atan2(absY, absX);
+        double angleDegrees = angleRadians * (180 / Math.PI);
+
+
+        return angleDegrees;
     }
 
 }

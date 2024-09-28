@@ -16,7 +16,6 @@ class Wall : LevelElement
 
     public void UpdateYX(int x, int y)
     {
-        this.Position = new Position(this.xPos, this.yPos);
 
     }
 

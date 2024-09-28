@@ -32,8 +32,9 @@ class Rat : Enemy
 
 
 
-    public override void Update(List<LevelElement> elements)
+    public override void Update(List<LevelElement> elements, Player player)
     {
+
         this.Position = new Position(this.xPos, this.yPos);
         Random rand = new Random();
         int direction = rand.Next(0,4);
@@ -70,13 +71,14 @@ class Rat : Enemy
     {
         for (int i = 0; i < elements.Count; i++)
         {
-            if (elements[i].elementChar == '#')
+            if (elements[i].elementChar != '@')
             {
                 if (elements[i].xPos == nextX && elements[i].yPos == nextY)
                 {
                     return true;
                 }
             }
+
         }
         return false;
 

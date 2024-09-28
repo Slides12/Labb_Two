@@ -63,7 +63,7 @@ class GameLoop
 
             cki = Console.ReadKey();
             player.UpdateMovement(cki,levelData.Elements);
-            UpdateEnemyMovements(levelData.Elements);
+            UpdateEnemyMovements(levelData.Elements, player);
 
 
         }
@@ -82,12 +82,12 @@ class GameLoop
 
 
 
-    public static void UpdateEnemyMovements(List<LevelElement> elements)
+    public static void UpdateEnemyMovements(List<LevelElement> elements, Player player)
     {
         foreach (var element in elements)
         {
-            (element as Rat)?.Update(elements);
-            (element as Snake)?.Update(elements);
+            (element as Rat)?.Update(elements, player);
+            (element as Snake)?.Update(elements, player);
 
         }
     }

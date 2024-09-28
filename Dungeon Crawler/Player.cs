@@ -40,6 +40,7 @@ class Player : LevelElement
 
     public void UpdateMovement(ConsoleKeyInfo cki, List<LevelElement> elements)
     {
+        this.Position = new Position(this.xPos, this.yPos);
 
         int nextX = this.xPos;
         int nextY = this.yPos;

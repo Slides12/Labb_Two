@@ -25,7 +25,7 @@ abstract class Enemy : LevelElement
     public Dice DefencekDice { get; set; }
 
 
-    public abstract void Update(List<LevelElement> elements);
+    public abstract void Update(List<LevelElement> elements, Player player);
 
 
 }

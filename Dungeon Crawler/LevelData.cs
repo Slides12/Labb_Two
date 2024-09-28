@@ -54,7 +54,6 @@ class LevelData
                     if (c == '#')
                     {
                         Wall wall = new Wall() { xPos = x, yPos = y };
-                        wall.UpdateYX(x,y);
                         elements.Add(wall);
                         x++;
                     }
