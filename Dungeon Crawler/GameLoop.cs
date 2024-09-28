@@ -59,6 +59,7 @@ class GameLoop
     {
         while (true)
         {
+            ResetHealthAndMoveCount();
             UpdateHealthAndMoveCount();
 
             cki = Console.ReadKey();
@@ -92,5 +93,12 @@ class GameLoop
         }
     }
 
- 
+
+
+    public void ResetHealthAndMoveCount()
+    {
+        Console.SetCursorPosition(0, 0);
+        Console.Write(new String(' ', Console.BufferWidth));
+        
+    }
 }

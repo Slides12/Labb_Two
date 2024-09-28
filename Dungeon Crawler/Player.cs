@@ -65,10 +65,15 @@ class Player : LevelElement
 
         if (IsAEnemy(nextX, nextY, elements))
         {
+            ResetCombatLog();
             DisplayCombatLog(nextX, nextY, elements);
         }
+        else
+        {
+            ResetCombatLog();
+        }
 
-        
+
 
         if (!IsAWall(nextX, nextY, elements))
         {
@@ -157,29 +162,58 @@ class Player : LevelElement
 
         int enemyATK = GetEnemy(nextX, nextY, elements).AttackDice.Throw();
         int enemyDEF = GetEnemy(nextX, nextY, elements).DefencekDice.Throw();
+        string playerDidDamage = "";
+        string enemyDidDamage = "";
 
-        Console.SetCursorPosition(0, 1);
-        Console.WriteLine($"You (ATK: {attackDice} => {playerATK}) attacked the {GetEnemy(nextX, nextY, elements).Name} (DEF: {GetEnemy(nextX, nextY, elements).DefencekDice} => {enemyDEF})");
-        Console.SetCursorPosition(0, 2);
-        Console.WriteLine($"The {GetEnemy(nextX, nextY, elements).Name} (ATK: {GetEnemy(nextX, nextY, elements).AttackDice} => {enemyATK}) attacked the (DEF: {defencekDice} => {playerDEF})");
+
 
 
         if (playerATK > enemyDEF)
         {
-            GetEnemy(nextX, nextY, elements).TakeDamage(playerATK - enemyDEF,elements);
+            GetEnemy(nextX, nextY, elements)?.TakeDamage(playerATK - enemyDEF,elements);
             Console.SetCursorPosition(55, 1);
-            //Console.Write("You made a impact. ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            playerDidDamage = "Wow, you scratched it. ";
         }
         else if (playerATK <= enemyDEF)
         {
             Console.SetCursorPosition(55, 1);
-            //Console.Write(" Did no damage.");
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            playerDidDamage = "You literally did 0 damage. ";
         }
 
+        Console.SetCursorPosition(0, 1);
+        Console.WriteLine($"You (ATK: {attackDice} => {playerATK}) attacked the {GetEnemy(nextX, nextY, elements)?.Name} (DEF: {GetEnemy(nextX, nextY, elements)?.DefencekDice} => {enemyDEF}), {playerDidDamage})");
 
+        if (playerATK < enemyDEF)
+        {
+            Console.SetCursorPosition(55, 1);
+            Console.ForegroundColor = ConsoleColor.Red;
+            enemyDidDamage = "He f-ed you up. ";
+        }
+        else if (playerATK >= enemyDEF)
+        {
+            Console.SetCursorPosition(55, 1);
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            enemyDidDamage = $"{GetEnemy(nextX, nextY, elements)?.Name} did 0 damage. ";
+        }
+
+        Console.SetCursorPosition(0, 2);
+        Console.WriteLine($"The {GetEnemy(nextX, nextY, elements)?.Name} (ATK: {GetEnemy(nextX, nextY, elements)?.AttackDice} => {enemyATK}) attacked the (DEF: {defencekDice} => {playerDEF}), {enemyDidDamage})");
+        
         if (enemyATK > playerDEF)
         {
             TakeDamage(enemyATK - playerDEF);
         }
-    }         
     }
+
+    public void ResetCombatLog()
+    {
+        Console.SetCursorPosition(0, 1);
+        Console.Write(new String(' ', Console.BufferWidth));
+        Console.SetCursorPosition(0, 2);
+        Console.Write(new String(' ', Console.BufferWidth));
+    }
+}
