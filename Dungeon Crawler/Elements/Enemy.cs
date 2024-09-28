@@ -24,8 +24,14 @@ abstract class Enemy : LevelElement
     public Dice AttackDice { get; set; }
     public Dice DefencekDice { get; set; }
 
+    public bool IsDead { get; set; } = false;
 
-    public abstract void Update(List<LevelElement> elements, Player player);
+
+public abstract void Update(List<LevelElement> elements, Player player);
+
+    public abstract void TakeDamage(int damageTaken);
+    public abstract void Die();
+
 
 
 }

@@ -28,6 +28,7 @@ class Rat : Enemy
         this.color = ConsoleColor.Red;
         this.Position = new Position(this.xPos, this.yPos);
 
+
     }
 
 
@@ -82,5 +83,19 @@ class Rat : Enemy
         }
         return false;
 
+    }
+
+    public override void TakeDamage(int damageTaken)
+    {
+        this.Health -= damageTaken;
+        if(this.Health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public override void Die()
+    {
+        this.IsDead = true;
     }
 }

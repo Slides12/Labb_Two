@@ -62,11 +62,50 @@ class Player : LevelElement
             nextY -= 1; 
         }
 
+        if (IsAEnemy(nextX, nextY, elements))
+        {
+            int playerATK = attackDice.Throw();
+            int playerDEF = defencekDice.Throw();
+
+            int enemyATK = GetEnemy(nextX, nextY, elements).AttackDice.Throw();
+            int enemyDEF = GetEnemy(nextX, nextY, elements).DefencekDice.Throw();
+
+            Console.SetCursorPosition(0, 1);
+            Console.WriteLine($"You (ATK: {attackDice} => {playerATK}) attacked the (DEF: {GetEnemy(nextX, nextY, elements).DefencekDice} => {enemyDEF})");
+            Console.SetCursorPosition(0, 2);
+            Console.WriteLine($"You (ATK: {GetEnemy(nextX,nextY, elements).AttackDice} => {enemyATK}) attacked the (DEF: {defencekDice} => {playerDEF})");
+
+
+            if (playerATK > enemyDEF) {
+                GetEnemy(nextX, nextY, elements).TakeDamage(playerATK - enemyDEF);
+                Console.SetCursorPosition(55, 1);
+                Console.Write("You made a impact. ");
+            }
+            else if(playerATK <= enemyDEF)
+            {
+                Console.SetCursorPosition(55, 1);
+                Console.Write(" Did no damage.");
+            }
+            
+
+            if(enemyATK > playerDEF)
+            {
+                TakeDamage(enemyATK-playerDEF);
+            }
+        }
+         
+            Console.SetCursorPosition(0, 1);
+            Console.WriteLine($"");
+            Console.SetCursorPosition(0, 2);
+            Console.WriteLine($"");
+        
+
         if (!IsAWall(nextX, nextY, elements))
         {
             this.xPos = nextX;
             this.yPos = nextY;
         }
+        
         this.moveCount++;
         base.Draw();
     }
@@ -78,7 +117,23 @@ class Player : LevelElement
     {
         for (int i = 0; i < elements.Count; i++)
         {
-            if (elements[i].elementChar == '#')
+            
+                if (elements[i].xPos == nextX && elements[i].yPos == nextY)
+                {
+                    return true;
+                }
+            
+        }
+        return false;
+
+    }
+
+
+    public bool IsAEnemy(int nextX, int nextY, List<LevelElement> elements)
+    {
+        for (int i = 0; i < elements.Count; i++)
+        {
+            if (elements[i].elementChar == 's' || elements[i].elementChar == 'r')
             {
                 if (elements[i].xPos == nextX && elements[i].yPos == nextY)
                 {
@@ -90,7 +145,36 @@ class Player : LevelElement
 
     }
 
+    public Enemy GetEnemy(int nextX, int nextY, List<LevelElement> elements)
+    {
+        for (int i = 0; i < elements.Count; i++)
+        {
+            if (elements[i].elementChar == 's' || elements[i].elementChar == 'r')
+            {
+                if (elements[i].xPos == nextX && elements[i].yPos == nextY)
+                {
+                    return (elements[i]as Enemy);
+                }
+            }
+        }
+        return null;
+
+    }
 
 
+    public void TakeDamage(int damageTaken)
+    {
+        Health -= damageTaken;
+
+        if(Health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+
+    }
 
 }

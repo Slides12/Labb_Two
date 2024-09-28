@@ -90,4 +90,19 @@ class Snake : Enemy
         return false;
 
     }
+
+    public override void TakeDamage(int damageTaken)
+    {
+        this.Health -= damageTaken;
+        if (this.Health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public override void Die()
+    {
+        this.IsDead = true;
+
+    }
 }

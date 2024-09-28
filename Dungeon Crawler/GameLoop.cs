@@ -52,10 +52,10 @@ class GameLoop
         }
         player.Draw();
 
-        Loop();
+        StartLoop();
     }
 
-    private void Loop()
+    private void StartLoop()
     {
         while (true)
         {
@@ -64,6 +64,7 @@ class GameLoop
             cki = Console.ReadKey();
             player.UpdateMovement(cki,levelData.Elements);
             UpdateEnemyMovements(levelData.Elements, player);
+
 
 
         }
@@ -88,7 +89,8 @@ class GameLoop
         {
             (element as Rat)?.Update(elements, player);
             (element as Snake)?.Update(elements, player);
-
         }
     }
+
+ 
 }
