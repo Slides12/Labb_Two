@@ -19,8 +19,8 @@ class Player : LevelElement
     public string Name { get; set; }
     public int Health { get; set; }
 
-    public Dice attackDice;
-    public Dice defencekDice;
+    public Dice attackDice { get; set; }
+    public Dice defencekDice { get; set; }
 
     public ConsoleKeyInfo cki;
     public int moveCount;
@@ -35,6 +35,7 @@ class Player : LevelElement
         this.defencekDice = new Dice(2, 6, 0);
         this.elementChar = '@';
         this.color = ConsoleColor.Blue;
+        this.Position = new Position(this.xPos, this.yPos);
 
     }
 
@@ -184,7 +185,7 @@ class Player : LevelElement
         }
 
         Console.SetCursorPosition(0, 1);
-        Console.WriteLine($"You (ATK: {attackDice} => {playerATK}) attacked the {GetEnemy(nextX, nextY, elements)?.Name} (DEF: {GetEnemy(nextX, nextY, elements)?.DefencekDice} => {enemyDEF}), {playerDidDamage})");
+        Console.WriteLine($"{Name} (ATK: {attackDice} => {playerATK}) attacked the {GetEnemy(nextX, nextY, elements)?.Name} (DEF: {GetEnemy(nextX, nextY, elements)?.DefencekDice} => {enemyDEF}), {playerDidDamage})");
 
         if (playerATK < enemyDEF)
         {

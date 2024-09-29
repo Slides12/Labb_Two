@@ -102,7 +102,6 @@ class Snake : Enemy
 
     public override void Die(List<LevelElement> elements)
     {
-        this.IsDead = true;
         elements.Remove(this);
 
     }
