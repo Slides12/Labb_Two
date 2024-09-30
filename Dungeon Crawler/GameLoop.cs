@@ -50,7 +50,8 @@ class GameLoop
 
             }
         }
-        player.Draw();
+        player.UpdateMovement(cki, levelData.Elements);
+
 
         StartLoop();
     }
@@ -59,12 +60,14 @@ class GameLoop
     {
         while (true)
         {
+            
+            player.UpdateMovement(cki, levelData.Elements);
+            UpdateEnemyMovements(levelData.Elements, player);
+            player.FogOfWar(levelData.Elements);
             ResetHealthAndMoveCount();
             UpdateHealthAndMoveCount();
-
             cki = Console.ReadKey();
-            player.UpdateMovement(cki,levelData.Elements);
-            UpdateEnemyMovements(levelData.Elements, player);
+            
 
 
 
@@ -86,10 +89,18 @@ class GameLoop
 
     public static void UpdateEnemyMovements(List<LevelElement> elements, Player player)
     {
+        try
+        { 
         foreach (var element in elements)
         {
             (element as Rat)?.Update(elements, player);
             (element as Snake)?.Update(elements, player);
+            (element as Wall)?.UpdateYX();
+
+            }
+        }
+        catch
+        {
         }
     }
 

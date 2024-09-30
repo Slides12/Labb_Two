@@ -18,6 +18,7 @@ abstract class LevelElement
     public char elementChar;
     public ConsoleColor color;
     public Position Position { get; set; }
+    public bool hasBeenSeen = false;
 
 
 
@@ -36,10 +37,12 @@ abstract class LevelElement
     }
 
 
-    private void ResetLastPos()
+    public void ResetLastPos()
     {
+        if (!hasBeenSeen) { 
         Console.SetCursorPosition(lastXPos, lastYPos);
         Console.Write(" ");
+        }
     }
 
 }

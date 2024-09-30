@@ -93,12 +93,12 @@ class LevelData
         }
 
 
-        foreach (var element in elements)
-        {
-            if(element.elementChar != '@') { 
-            element.Draw();
-            }
-        }
+        //foreach (var element in elements)
+        //{
+        //    if(element.elementChar != '@') { 
+        //    element.Draw();
+        //    }
+        //}
 
     }
 }

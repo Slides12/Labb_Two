@@ -19,7 +19,7 @@ class Snake : Enemy
         this.Name = "Snake";
         this.Health = 25;
         this.AttackDice = new Dice(3,4,2);
-        this.DefencekDice = new Dice(1,8,5);
+        this.DefencekDice = new Dice(1,6,3);
         this.elementChar = 's';
         this.color = ConsoleColor.Green;
         this.Position = new Position(this.xPos, this.yPos);
@@ -70,7 +70,6 @@ class Snake : Enemy
             this.yPos = nextY;
         }
 
-        base.Draw();
 
         //Rat förflyttar sig 1 steg i slumpmässig vald riktning(upp, ner, höger eller vänster) varje omgång.
     }
