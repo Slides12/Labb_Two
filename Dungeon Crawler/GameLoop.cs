@@ -60,14 +60,16 @@ class GameLoop
     {
         while (true)
         {
-            
+            if(player.Health > 0) 
+            { 
             player.UpdateMovement(cki, levelData.Elements);
             UpdateEnemyMovements(levelData.Elements, player);
             player.FogOfWar(levelData.Elements);
             ResetHealthAndMoveCount();
             UpdateHealthAndMoveCount();
             cki = Console.ReadKey();
-            
+            }
+
 
 
 
@@ -93,8 +95,7 @@ class GameLoop
         { 
         foreach (var element in elements)
         {
-            (element as Rat)?.Update(elements, player);
-            (element as Snake)?.Update(elements, player);
+            (element as Enemy)?.Update(elements, player);
             (element as Wall)?.UpdateYX();
 
             }
