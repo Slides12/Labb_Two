@@ -166,35 +166,37 @@ class Player : LevelElement
         int enemyDEF = GetEnemy(nextX, nextY, elements).DefencekDice.Throw();
         string playerDidDamage = "";
         string enemyDidDamage = "";
-       
+        Enemy enemy = GetEnemy(nextX, nextY, elements);
 
-        if (playerATK - enemyDEF >= GetEnemy(nextX, nextY, elements)?.Health)
+
+
+        if (playerATK - enemyDEF >= enemy?.Health)
         {
-            GetEnemy(nextX, nextY, elements)?.TakeDamage(playerATK - enemyDEF, elements);
+            enemy?.TakeDamage(playerATK - enemyDEF, elements);
             Console.SetCursorPosition(55, 1);
             Console.ForegroundColor = ConsoleColor.Green;
             playerDidDamage = $"You killed it.";
         }
         else if (playerATK > enemyDEF)
         {
-            GetEnemy(nextX, nextY, elements)?.TakeDamage(playerATK - enemyDEF, elements);
+            enemy?.TakeDamage(playerATK - enemyDEF, elements);
             Console.SetCursorPosition(55, 1);
             Console.ForegroundColor = ConsoleColor.Yellow;
-            playerDidDamage = $"Wow, you scratched it.{GetEnemy(nextX, nextY, elements)?.Name}:{GetEnemy(nextX, nextY, elements)?.Health} HP ";
+            playerDidDamage = $"Wow, you scratched it.{enemy?.Name}:{enemy?.Health} HP ";
         }
         else if (playerATK <= enemyDEF)
         {
             Console.SetCursorPosition(55, 1);
             Console.ForegroundColor = ConsoleColor.Red;
 
-            playerDidDamage = $"You literally did 0 damage. {GetEnemy(nextX, nextY, elements)?.Name}:{GetEnemy(nextX, nextY, elements)?.Health} HP ";
+            playerDidDamage = $"You literally did 0 damage. {enemy?.Name}:{enemy?.Health} HP ";
         }
 
        
 
         Console.SetCursorPosition(0, 1);
 
-        Console.WriteLine($"{Name} (ATK: {attackDice} => {playerATK}) attacked the {GetEnemy(nextX, nextY, elements)?.Name} (DEF: {GetEnemy(nextX, nextY, elements)?.DefencekDice} => {enemyDEF}), {playerDidDamage})");
+        Console.WriteLine($"{Name} (ATK: {attackDice} => {playerATK}) attacked the {enemy?.Name} (DEF: {enemy?.DefencekDice} => {enemyDEF}), {playerDidDamage})");
 
         if (enemyATK > playerDEF)
         {
@@ -207,13 +209,13 @@ class Player : LevelElement
             Console.SetCursorPosition(55, 1);
             Console.ForegroundColor = ConsoleColor.Red;
 
-            enemyDidDamage = $"{GetEnemy(nextX, nextY, elements)?.Name} did 0 damage. ";
+            enemyDidDamage = $"{enemy?.Name} did 0 damage. ";
         }
 
-        if (playerATK - enemyDEF <= GetEnemy(nextX, nextY, elements)?.Health)
+        if (playerATK - enemyDEF <= enemy?.Health)
         {
             Console.SetCursorPosition(0, 2);
-            Console.WriteLine($"The {GetEnemy(nextX, nextY, elements)?.Name} (ATK: {GetEnemy(nextX, nextY, elements)?.AttackDice} => {enemyATK}) attacked the (DEF: {defencekDice} => {playerDEF}), {enemyDidDamage})");
+            Console.WriteLine($"The {enemy?.Name} (ATK: {enemy?.AttackDice} => {enemyATK}) attacked the (DEF: {defencekDice} => {playerDEF}), {enemyDidDamage})");
         }
         else
         {
