@@ -1,15 +1,7 @@
-﻿//Slutligen har vi klasserna “Rat” och “Snake” som initialiserar sina nedärvda
-//properties med de unika egenskaper som respektive fiende har,
-//samt även implementerar Update-metoden på sina egna unika sätt.
+﻿
 
-
-//Player: HP = 100, Attack = 2d6 + 2, Defence = 2d6 + 0
-
-//Rat: HP = 10, Attack = 1d6 + 3, Defence = 1d6 + 1
-
-
-//Snake: HP = 25, Attack = 3d4 + 2, Defence = 1d8 + 5
-
+using System.Numerics;
+using System.Xml.Linq;
 
 class Snake : Enemy
 {
@@ -31,13 +23,13 @@ class Snake : Enemy
     public override void Update(List<LevelElement> elements, Player player)
     {
         this.Position = new Position(this.xPos, this.yPos);
-        //Console.SetCursorPosition(0, 1);
+        
+        Movement(elements,player);
 
-        //Console.Write(Position.AngleTo(player.Position));
-        //Console.SetCursorPosition(0, 2);
+    }
 
-        //Console.Write(Position.DistanceTo(player.Position));
-
+    public void Movement(List<LevelElement> elements, Player player)
+    {
         int nextX = this.xPos;
         int nextY = this.yPos;
 
@@ -69,9 +61,6 @@ class Snake : Enemy
             this.xPos = nextX;
             this.yPos = nextY;
         }
-
-
-        //Rat förflyttar sig 1 steg i slumpmässig vald riktning(upp, ner, höger eller vänster) varje omgång.
     }
 
     public bool IsAWall(int nextX, int nextY, List<LevelElement> elements)
@@ -84,10 +73,8 @@ class Snake : Enemy
                     return true;
                 }
             }
-
         }
         return false;
-
     }
 
     public override void TakeDamage(int damageTaken, List<LevelElement> elements)
@@ -102,6 +89,5 @@ class Snake : Enemy
     public override void Die(List<LevelElement> elements)
     {
         elements.Remove(this);
-
     }
 }

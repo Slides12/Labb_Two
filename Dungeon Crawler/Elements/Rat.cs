@@ -1,16 +1,5 @@
-﻿//Slutligen har vi klasserna “Rat” och “Snake” som initialiserar sina nedärvda
-//properties med de unika egenskaper som respektive fiende har,
-//samt även implementerar Update-metoden på sina egna unika sätt.
-
-
-//Player: HP = 100, Attack = 2d6 + 2, Defence = 2d6 + 0
-
-//Rat: HP = 10, Attack = 1d6 + 3, Defence = 1d6 + 1
-
-
-//Snake: HP = 25, Attack = 3d4 + 2, Defence = 1d8 + 5
-
-
+﻿
+using System.Numerics;
 using System.Runtime.ConstrainedExecution;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
@@ -36,13 +25,17 @@ class Rat : Enemy
     public override void Update(List<LevelElement> elements, Player player)
     {
         this.Position = new Position(this.xPos, this.yPos);
-        
 
+        Movement(elements,player);
+    }
+
+    public void Movement(List<LevelElement> elements, Player player)
+    {
         Random rand = new Random();
         int direction = rand.Next(0, 4);
         int nextX = this.xPos;
         int nextY = this.yPos;
-        
+
         if (direction == 0)
         {
             nextX -= 1;
@@ -75,10 +68,6 @@ class Rat : Enemy
                 this.yPos = nextY;
             }
         }
-
-
-        //Rat förflyttar sig 1 steg i slumpmässig vald riktning(upp, ner
-        //, höger eller vänster) varje omgång.
     }
 
     public bool IsAWall(int nextX, int nextY, List<LevelElement> elements)
@@ -123,56 +112,23 @@ class Rat : Enemy
 
         int playerATK = player.attackDice.Throw();
         int playerDEF = player.defencekDice.Throw();
-        string playerDidDamage = "";
-        string enemyDidDamage = "";
+        
 
-        if (enemyATK > playerDEF)
-        {
-            player?.TakeDamage(enemyATK - playerDEF);
-            Console.SetCursorPosition(55, 1);
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            enemyDidDamage = "He f-ed you up. ";
-        }
-        else if (enemyATK <= playerDEF)
-        {
-            Console.SetCursorPosition(55, 1);
-            Console.ForegroundColor = ConsoleColor.Green;
-
-            enemyDidDamage = $"{Name} did 0 damage. ";
-        }
 
         if (playerATK > enemyDEF)
         {
             TakeDamage(playerATK - enemyDEF, elements);
         }
 
+        string enemyDidDamage = GetEnemyAttackText(enemyATK, playerDEF, player);
         Console.SetCursorPosition(0, 1);
         Console.WriteLine($"The {Name} (ATK: {AttackDice} => {enemyATK}) attacked the (DEF: {player?.defencekDice} => {playerDEF}), {enemyDidDamage})");
-        if(Health <= 0)
-        {
-            Console.SetCursorPosition(55, 1);
-            Console.ForegroundColor = ConsoleColor.Green;
-            playerDidDamage = $"You killed it!";
-        }
-        else if (playerATK > enemyDEF)
-        {
-            Console.SetCursorPosition(55, 1);
-            Console.ForegroundColor = ConsoleColor.Green;
-            playerDidDamage = $"Wow, you scratched it. {Name}:{Health} HP";
-        }
-        else if (playerATK <= enemyDEF)
-        {
-            Console.SetCursorPosition(55, 1);
-            Console.ForegroundColor = ConsoleColor.Yellow;
-
-            playerDidDamage = $"You literally did 0 damage. {Name}:{Health} HP";
-        }
 
 
+
+        string playerDidDamage = GetPlayerAttackText(playerATK, enemyDEF);
         Console.SetCursorPosition(0, 2);
         Console.WriteLine($"{player?.Name} (ATK: {player?.attackDice} => {playerATK}) attacked the {Name} (DEF: {DefencekDice} => {enemyDEF}), {playerDidDamage})");
-
-
        
     }
 
@@ -183,6 +139,51 @@ class Rat : Enemy
         Console.Write(new String(' ', Console.BufferWidth));
         Console.SetCursorPosition(0, 2);
         Console.Write(new String(' ', Console.BufferWidth));
+    }
+
+    public string GetEnemyAttackText(int enemyATK, int playerDEF, Player player)
+    {
+        string enemyDidDamage = "";
+
+        if (enemyATK > playerDEF)
+        {
+            player?.TakeDamage(enemyATK - playerDEF);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            enemyDidDamage = "He f-ed you up. ";
+        }
+        else if (enemyATK <= playerDEF)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            enemyDidDamage = $"{Name} did 0 damage. ";
+        }
+
+        return enemyDidDamage;
+    }
+
+
+    public string GetPlayerAttackText(int playerATK, int enemyDEF)
+    {
+        string playerDidDamage = "";
+        
+        if (Health <= 0)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            playerDidDamage = $"You killed it!";
+        }
+        else if (playerATK > enemyDEF)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            playerDidDamage = $"Wow, you scratched it. {Name}:{Health} HP";
+        }
+        else if (playerATK <= enemyDEF)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            playerDidDamage = $"You literally did 0 damage. {Name}:{Health} HP";
+        }
+
+        return playerDidDamage;
     }
 
 }
