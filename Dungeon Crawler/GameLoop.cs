@@ -3,8 +3,8 @@
 
 class GameLoop
 {
-    LevelData levelData = new LevelData();
-    Player player = new Player() {Name = "Daniel" };
+    private LevelData levelData = new LevelData();
+    private Player player = new Player() {Name = "Daniel" };
     public ConsoleKeyInfo cki;
 
 
